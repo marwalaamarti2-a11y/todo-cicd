@@ -21,3 +21,6 @@
     def _verifier(self, numero):
         if numero < 1 or numero > len(self.taches):
             raise IndexError("Numéro de tâche inexistant")
+
+    def lister_en_cours(self):
+        return [t for t in self.taches if not t["terminee"]]

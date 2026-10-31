@@ -37,3 +37,11 @@ def test_numero_inexistant():
 
 def test_liste_vide():
     assert GestionnaireTaches().lister() == []
+
+
+def test_lister_en_cours():
+    g = GestionnaireTaches()
+    g.ajouter("A")
+    g.ajouter("B")
+    g.terminer(1)
+    assert g.lister_en_cours() == [{"titre": "B", "terminee": False}]
