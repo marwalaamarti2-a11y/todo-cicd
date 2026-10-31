@@ -13,7 +13,7 @@
 
     def terminer(self, numero):
         self._verifier(numero)
-        self.taches[numero - 1]["terminee"] = False
+        self.taches[numero - 1]["terminee"] = True
 
     def lister(self):
         return list(self.taches)
